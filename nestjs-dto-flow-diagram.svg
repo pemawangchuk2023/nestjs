@@ -1,0 +1,92 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#334155"/>
+    </marker>
+    <marker id="greenArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#16a34a"/>
+    </marker>
+    <style>
+      .title{font:700 32px Arial,sans-serif;fill:#0f172a}
+      .boxTitle{font:700 22px Arial,sans-serif;fill:#0f172a}
+      .small{font:600 15px Arial,sans-serif;fill:#475569}
+      .tiny{font:600 13px Arial,sans-serif;fill:#64748b}
+      .arrow{stroke:#334155;stroke-width:4;fill:none;marker-end:url(#arrow);stroke-linecap:round}
+      .green{stroke:#16a34a;stroke-width:4;fill:none;marker-end:url(#greenArrow);stroke-linecap:round}
+      .bad{stroke:#dc2626;stroke-width:4;fill:none;marker-end:url(#arrow);stroke-linecap:round;stroke-dasharray:8 8}
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" fill="#f8fafc"/>
+  <text x="600" y="48" text-anchor="middle" class="title">DTO in NestJS</text>
+
+  <!-- Client -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="165" width="150" height="130" rx="20" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <circle cx="125" cy="205" r="22" fill="#2563eb"/>
+    <path d="M85 258 C100 232,150 232,165 258" fill="#93c5fd"/>
+    <text x="125" y="335" text-anchor="middle" class="boxTitle">Client</text>
+  </g>
+
+  <!-- Request body -->
+  <g filter="url(#shadow)">
+    <rect x="265" y="145" width="170" height="170" rx="18" fill="#fff7ed" stroke="#f97316" stroke-width="3"/>
+    <rect x="295" y="175" width="110" height="18" rx="9" fill="#fed7aa"/>
+    <rect x="295" y="210" width="90" height="18" rx="9" fill="#fed7aa"/>
+    <rect x="295" y="245" width="120" height="18" rx="9" fill="#fed7aa"/>
+    <text x="350" y="350" text-anchor="middle" class="boxTitle">Request Body</text>
+    <text x="350" y="374" text-anchor="middle" class="small">raw data</text>
+  </g>
+
+  <!-- DTO -->
+  <g filter="url(#shadow)">
+    <rect x="510" y="115" width="180" height="230" rx="22" fill="#fce7f3" stroke="#db2777" stroke-width="4"/>
+    <text x="600" y="154" text-anchor="middle" class="boxTitle">DTO</text>
+    <text x="600" y="181" text-anchor="middle" class="small">data rules</text>
+    <line x1="545" y1="215" x2="655" y2="215" stroke="#db2777" stroke-width="3"/>
+    <circle cx="552" cy="245" r="8" fill="#16a34a"/>
+    <text x="575" y="250" class="tiny">name: text</text>
+    <circle cx="552" cy="278" r="8" fill="#16a34a"/>
+    <text x="575" y="283" class="tiny">email: email</text>
+    <circle cx="552" cy="311" r="8" fill="#16a34a"/>
+    <text x="575" y="316" class="tiny">age: number</text>
+    <text x="600" y="380" text-anchor="middle" class="small">validates data</text>
+  </g>
+
+  <!-- Bad request -->
+  <g filter="url(#shadow)">
+    <rect x="525" y="410" width="150" height="52" rx="16" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <text x="600" y="442" text-anchor="middle" class="small" fill="#991b1b">Bad Request</text>
+  </g>
+
+  <!-- Controller -->
+  <g filter="url(#shadow)">
+    <rect x="765" y="165" width="160" height="130" rx="20" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+    <path d="M805 205 H885 M805 230 H870 M805 255 H885" stroke="#0284c7" stroke-width="8" stroke-linecap="round"/>
+    <text x="845" y="335" text-anchor="middle" class="boxTitle">Controller</text>
+  </g>
+
+  <!-- Service -->
+  <g filter="url(#shadow)">
+    <rect x="1000" y="165" width="160" height="130" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <circle cx="1080" cy="230" r="34" fill="#bbf7d0"/>
+    <path d="M1080 195 V265 M1045 230 H1115 M1056 206 L1104 254 M1104 206 L1056 254" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/>
+    <text x="1080" y="335" text-anchor="middle" class="boxTitle">Service</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M205 230 H255" class="arrow"/>
+  <path d="M440 230 H500" class="arrow"/>
+  <path d="M695 230 H755" class="green"/>
+  <path d="M930 230 H990" class="arrow"/>
+  <path d="M600 350 V400" class="bad"/>
+
+  <!-- Arrow labels -->
+  <text x="230" y="210" text-anchor="middle" class="tiny">sends</text>
+  <text x="470" y="210" text-anchor="middle" class="tiny">checked by</text>
+  <text x="725" y="210" text-anchor="middle" class="tiny">only if valid</text>
+  <text x="960" y="210" text-anchor="middle" class="tiny">calls</text>
+</svg>

@@ -77,3 +77,49 @@ Service
 - DTO does not save data.
 - DTO does not do the main work.
 - Service does the main work.
+
+---
+
+# Interceptor in NestJS Flow
+
+![NestJS interceptor flow](./nestjs-interceptor-flow-diagram.svg)
+
+## Simple Interceptor Explanation
+
+An interceptor sits around the controller method.
+
+It can run **before** the controller.
+
+It can also run **after** the controller and service finish.
+
+Think of it like a wrapper around the request and response.
+
+## Interceptor Flow
+
+```text
+Client
+  ↓
+Interceptor runs before
+  ↓
+Controller
+  ↓
+Service
+  ↓
+Interceptor runs after
+  ↓
+Response goes back to client
+```
+
+## What Can Interceptors Do?
+
+- Log when a request starts.
+- Check how long a request takes.
+- Change the response before sending it back.
+- Wrap response data in a common format.
+
+## Remember This
+
+- Controller handles the route.
+- Service does the main work.
+- Interceptor can run before and after them.
+- Interceptor is useful for logging, timing, and changing response shape.

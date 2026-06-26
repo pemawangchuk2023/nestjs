@@ -1,9 +1,11 @@
-import { Post,Body, Controller, Get, Param, Query, Put } from '@nestjs/common';
+import { Post,Body, Controller, Get, Param, Query, Put, Delete } from '@nestjs/common';
 import { CreateUserDto } from 'src/user/dto/create-user.dto';
 import { UpdateUserDto } from 'src/user/dto/update-user.dto';
+import { UserService } from 'src/user/user.service';
 
 @Controller('user')
 export class UserController {
+     constructor(private readonly userService: UserService) {}  
     // Get User
     @Get()
     getUsers(@Query('name') name: string) {
@@ -21,7 +23,7 @@ export class UserController {
 
     @Get(":id")
     getUserById(@Param("id") id: string) {
-        return {id, name: "Pema"}
+        return this.userService.findOneUser(Number(id));   
     }
 
     @Post()
@@ -35,6 +37,10 @@ export class UserController {
             data: {id, ...updateUserDto},
             message: "User updated successfully"
         }
+    }
+    @Delete(":id") 
+    deleteUser(@Param("id") id: string) {
+        return this.userService.deleteUser(Number(id))
     }
     
 }

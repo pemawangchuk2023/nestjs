@@ -1,4 +1,5 @@
-import { Post,Body, Controller, Get, Param, Query, Put, Delete } from '@nestjs/common';
+import { Post,Body, Controller, Get, Param, Query, Put, Delete, ParseIntPipe, UseGuards } from '@nestjs/common';
+import { RoleGuard } from 'src/guards/role.guard';
 import { CreateUserDto } from 'src/user/dto/create-user.dto';
 import { UpdateUserDto } from 'src/user/dto/update-user.dto';
 import { UserService } from 'src/user/user.service';
@@ -22,8 +23,8 @@ export class UserController {
     }
 
     @Get(":id")
-    getUserById(@Param("id") id: string) {
-        return this.userService.findOneUser(Number(id));   
+    getUserById(@Param("id", ParseIntPipe) id: number) {
+        return this.userService.findOneUser(id);   
     }
 
     @Post()
@@ -39,6 +40,7 @@ export class UserController {
         }
     }
     @Delete(":id") 
+    @UseGuards(RoleGuard)
     deleteUser(@Param("id") id: string) {
         return this.userService.deleteUser(Number(id))
     }

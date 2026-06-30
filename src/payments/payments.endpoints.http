@@ -1,1 +1,5 @@
+### Chapter 1: Get all payments
 GET http://localhost:3000/payments
+
+### Chapter 2: Get one payment by route parameter
+GET http://localhost:3000/payments/1

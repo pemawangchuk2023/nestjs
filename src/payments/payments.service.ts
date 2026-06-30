@@ -23,4 +23,8 @@ export class PaymentsService {
     public findAll() {
         return this.payments;
     }
+
+    public findOne(id: string) {
+        return this.payments.find((payment) => payment.id === Number(id));
+    }
 }

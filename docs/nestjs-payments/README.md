@@ -8,6 +8,7 @@ This folder is the learning book for the repo. The source code stays in `src/`; 
 | --- | --- | --- | --- |
 | [01 - Basic Payments Flow](chapter-01-basic-flow.md) | Modules, controllers, services | How a request moves through a NestJS feature | `GET /payments` |
 | [02 - Controller Route Parameters](chapter-02-route-params.md) | `@Get(':id')`, `@Param()` | How to read a value from the URL | `GET /payments/1` |
+| [03 - Controller Query Parameters](chapter-03-query-params.md) | `@Query()` | How to filter list data using the query string | `GET /payments?status=paid` |
 
 ## Current Feature
 
@@ -16,8 +17,9 @@ PaymentsModule
   PaymentsController
     GET /payments
     GET /payments/:id
+    GET /payments?status=paid
   PaymentsService
-    findAll()
+    findAll(status)
     findOne(id)
 ```
 

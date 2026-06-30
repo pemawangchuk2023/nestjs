@@ -19,8 +19,11 @@ export class PaymentsService {
         },
 
     ];
+    public findAll(status?: string) {
+        if (status) {
+            return this.payments.filter((payment) => payment.status === status);
+        }
 
-    public findAll() {
         return this.payments;
     }
 

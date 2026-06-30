@@ -3,3 +3,9 @@ GET http://localhost:3000/payments
 
 ### Chapter 2: Get one payment by route parameter
 GET http://localhost:3000/payments/1
+
+### Chapter 3: Filter payments by paid status
+GET http://localhost:3000/payments?status=paid
+
+### Chapter 3: Filter payments by pending status
+GET http://localhost:3000/payments?status=pending

@@ -1,6 +1,6 @@
 # Chapter 02 - Controller Route Parameters
 
-[Previous: Chapter 01](chapter-01-basic-flow.md) | [Course index](README.md)
+[Previous: Chapter 01](chapter-01-basic-flow.md) | [Course index](README.md) | [Next: Chapter 03](chapter-03-query-params.md)
 
 ![Chapter 02 route parameter flow](assets/chapter-02-route-params.svg)
 

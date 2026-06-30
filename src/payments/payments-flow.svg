@@ -1,0 +1,99 @@
+<svg width="1160" height="760" viewBox="0 0 1160 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1160" height="760" rx="0" fill="#F6F8FB"/>
+
+  <text x="580" y="62" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" fill="#172033">
+    NestJS Payments Request Flow
+  </text>
+  <text x="580" y="96" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#536176">
+    GET /payments moves through module wiring, controller handling, and service business logic.
+  </text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#2563EB"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#1F2937" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect x="370" y="135" width="420" height="86" rx="8" fill="#FFFFFF" stroke="#CBD5E1" filter="url(#shadow)"/>
+  <text x="580" y="169" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A">
+    AppModule
+  </text>
+  <text x="580" y="196" text-anchor="middle" font-family="Consolas, monospace" font-size="15" fill="#475569">
+    imports: [PaymentsModule]
+  </text>
+
+  <line x1="580" y1="221" x2="580" y2="270" stroke="#2563EB" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="610" y="252" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#2563EB">
+    imports
+  </text>
+
+  <rect x="300" y="280" width="560" height="128" rx="8" fill="#EEF6FF" stroke="#93C5FD" filter="url(#shadow)"/>
+  <text x="580" y="318" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A">
+    PaymentsModule
+  </text>
+  <text x="580" y="346" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#475569">
+    Connects the route layer with the business logic layer.
+  </text>
+  <text x="580" y="376" text-anchor="middle" font-family="Consolas, monospace" font-size="15" fill="#1E40AF">
+    controllers: [PaymentsController]
+  </text>
+  <text x="580" y="397" text-anchor="middle" font-family="Consolas, monospace" font-size="15" fill="#1E40AF">
+    providers: [PaymentsService]
+  </text>
+
+  <line x1="420" y1="408" x2="300" y2="472" stroke="#2563EB" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="740" y1="408" x2="860" y2="472" stroke="#2563EB" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="95" y="485" width="410" height="136" rx="8" fill="#FFFFFF" stroke="#CBD5E1" filter="url(#shadow)"/>
+  <text x="300" y="524" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A">
+    PaymentsController
+  </text>
+  <text x="300" y="553" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#475569">
+    @Controller('payments')
+  </text>
+  <text x="300" y="579" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#475569">
+    @Get() findAll()
+  </text>
+  <text x="300" y="606" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#2563EB">
+    Receives GET /payments
+  </text>
+
+  <rect x="655" y="485" width="410" height="136" rx="8" fill="#FFFFFF" stroke="#CBD5E1" filter="url(#shadow)"/>
+  <text x="860" y="524" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A">
+    PaymentsService
+  </text>
+  <text x="860" y="553" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#475569">
+    findAll()
+  </text>
+  <text x="860" y="579" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#475569">
+    Holds payment/accounting data
+  </text>
+  <text x="860" y="606" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#2563EB">
+    Returns payment list
+  </text>
+
+  <line x1="505" y1="553" x2="643" y2="553" stroke="#2563EB" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="574" y="536" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#2563EB">
+    calls
+  </text>
+
+  <rect x="260" y="665" width="640" height="54" rx="8" fill="#ECFDF5" stroke="#86EFAC"/>
+  <text x="580" y="698" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#166534">
+    JSON response: BTN-001 paid, BTN-002 pending
+  </text>
+
+  <line x1="860" y1="621" x2="760" y2="665" stroke="#16A34A" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="300" y1="621" x2="400" y2="665" stroke="#16A34A" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="94" y="142" width="210" height="62" rx="8" fill="#FFF7ED" stroke="#FDBA74"/>
+  <text x="199" y="168" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#9A3412">
+    HTTP request
+  </text>
+  <text x="199" y="191" text-anchor="middle" font-family="Consolas, monospace" font-size="15" fill="#9A3412">
+    GET /payments
+  </text>
+  <line x1="304" y1="173" x2="358" y2="173" stroke="#F97316" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

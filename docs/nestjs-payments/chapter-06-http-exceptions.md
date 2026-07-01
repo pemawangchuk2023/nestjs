@@ -1,6 +1,6 @@
 # Chapter 06 - Built-In HTTP Exceptions
 
-[Previous: Chapter 05](chapter-05-validation-pipe.md) | [Course index](README.md)
+[Previous: Chapter 05](chapter-05-validation-pipe.md) | [Course index](README.md) | [Next: Chapter 07](chapter-07-providers-repository.md)
 
 ![Chapter 06 HTTP exceptions flow](assets/chapter-06-http-exceptions.svg)
 

@@ -1,0 +1,47 @@
+<svg width="1160" height="760" viewBox="0 0 1160 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1160" height="760" fill="#F8FAFC"/>
+  <text x="580" y="58" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" fill="#172033">Chapter 07: Providers And Repository Layer</text>
+  <text x="580" y="91" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#536176">Dependency injection lets PaymentsService use PaymentsRepository without creating it manually.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#2563EB"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#1F2937" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect x="95" y="135" width="320" height="92" rx="8" fill="#FFF7ED" stroke="#FDBA74" filter="url(#shadow)"/>
+  <text x="255" y="170" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#9A3412">HTTP Request</text>
+  <text x="255" y="199" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#9A3412">GET /payments/1</text>
+
+  <rect x="555" y="135" width="410" height="92" rx="8" fill="#FFFFFF" stroke="#CBD5E1" filter="url(#shadow)"/>
+  <text x="760" y="170" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#0F172A">PaymentsController</text>
+  <text x="760" y="199" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#475569">Receives HTTP and calls the service</text>
+
+  <line x1="415" y1="181" x2="543" y2="181" stroke="#F97316" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="375" y="315" width="410" height="112" rx="8" fill="#EFF6FF" stroke="#93C5FD" filter="url(#shadow)"/>
+  <text x="580" y="352" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1E40AF">PaymentsService</text>
+  <text x="580" y="382" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1E40AF">Business rules live here</text>
+  <text x="580" y="407" text-anchor="middle" font-family="Consolas, monospace" font-size="15" fill="#1E40AF">constructor(repository)</text>
+
+  <line x1="760" y1="227" x2="620" y2="303" stroke="#2563EB" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="375" y="520" width="410" height="112" rx="8" fill="#ECFDF5" stroke="#86EFAC" filter="url(#shadow)"/>
+  <text x="580" y="557" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#166534">PaymentsRepository</text>
+  <text x="580" y="587" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#166534">Data access lives here</text>
+  <text x="580" y="612" text-anchor="middle" font-family="Consolas, monospace" font-size="15" fill="#166534">findAll(), findById(), create()</text>
+
+  <line x1="580" y1="427" x2="580" y2="508" stroke="#2563EB" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="835" y="335" width="250" height="74" rx="8" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <text x="960" y="364" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">PaymentsModule</text>
+  <text x="960" y="389" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#475569">providers: [Service, Repository]</text>
+
+  <line x1="835" y1="372" x2="797" y2="372" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="220" y="675" width="720" height="54" rx="8" fill="#EEF2FF" stroke="#A5B4FC"/>
+  <text x="580" y="708" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#3730A3">Controller -> Service -> Repository -> Data</text>
+</svg>

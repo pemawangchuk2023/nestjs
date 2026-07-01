@@ -13,6 +13,7 @@ The goal is simple: every chapter adds one NestJS concept, one testable endpoint
 | [Chapter 03](docs/nestjs-payments/chapter-03-query-params.md) | Controller query parameters | Filter payments by status | `GET /payments?status=paid` |
 | [Chapter 04](docs/nestjs-payments/chapter-04-dtos.md) | DTOs and request bodies | Create a payment from JSON body | `POST /payments` |
 | [Chapter 05](docs/nestjs-payments/chapter-05-validation-pipe.md) | ValidationPipe and DTO rules | Reject invalid payment bodies | `POST /payments` |
+| [Chapter 06](docs/nestjs-payments/chapter-06-http-exceptions.md) | Built-in HTTP exceptions | Return 404 for missing payments | `GET /payments/999` |
 
 Start here:
 
@@ -30,12 +31,14 @@ nestjs_p/
       chapter-03-query-params.md
       chapter-04-dtos.md
       chapter-05-validation-pipe.md
+      chapter-06-http-exceptions.md
       assets/
         chapter-01-basic-flow.svg
         chapter-02-route-params.svg
         chapter-03-query-params.svg
         chapter-04-dtos.svg
         chapter-05-validation-pipe.svg
+        chapter-06-http-exceptions.svg
   src/
     payments/
       payments.module.ts
@@ -66,6 +69,7 @@ GET http://localhost:3000/payments
 GET http://localhost:3000/payments/1
 GET http://localhost:3000/payments?status=paid
 POST http://localhost:3000/payments
+GET http://localhost:3000/payments/999
 ```
 
 ## Official Docs
@@ -75,3 +79,4 @@ This repo follows the official NestJS docs chapter by chapter:
 - [NestJS Documentation](https://docs.nestjs.com/)
 - [Controllers](https://docs.nestjs.com/controllers)
 - [Validation](https://docs.nestjs.com/techniques/validation)
+- [Exception filters](https://docs.nestjs.com/exception-filters)

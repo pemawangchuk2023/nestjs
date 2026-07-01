@@ -11,6 +11,7 @@ This folder is the learning book for the repo. The source code stays in `src/`; 
 | [03 - Controller Query Parameters](chapter-03-query-params.md) | `@Query()` | How to filter list data using the query string | `GET /payments?status=paid` |
 | [04 - DTOs For Request Bodies](chapter-04-dtos.md) | DTO, `@Post()`, `@Body()` | How to describe create-payment request data | `POST /payments` |
 | [05 - DTO Validation With ValidationPipe](chapter-05-validation-pipe.md) | `ValidationPipe`, `class-validator` | How to reject bad request bodies | `POST /payments` |
+| [06 - Built-In HTTP Exceptions](chapter-06-http-exceptions.md) | `NotFoundException` | How to return proper API errors for missing records | `GET /payments/999` |
 
 ## Current Feature
 
@@ -25,6 +26,7 @@ PaymentsModule
     findAll(status)
     findOne(id)
     create(createPaymentDto)
+    throws NotFoundException when payment is missing
   ValidationPipe
     validates CreatePaymentDto before service logic
 ```
@@ -41,3 +43,4 @@ PaymentsModule
 
 - [NestJS Controllers](https://docs.nestjs.com/controllers)
 - [NestJS Validation](https://docs.nestjs.com/techniques/validation)
+- [NestJS Exception Filters](https://docs.nestjs.com/exception-filters)

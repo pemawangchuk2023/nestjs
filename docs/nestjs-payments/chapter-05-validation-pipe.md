@@ -1,6 +1,6 @@
 # Chapter 05 - DTO Validation With ValidationPipe
 
-[Previous: Chapter 04](chapter-04-dtos.md) | [Course index](README.md)
+[Previous: Chapter 04](chapter-04-dtos.md) | [Course index](README.md) | [Next: Chapter 06](chapter-06-http-exceptions.md)
 
 ![Chapter 05 validation pipe flow](assets/chapter-05-validation-pipe.svg)
 

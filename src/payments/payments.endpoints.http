@@ -32,3 +32,8 @@ Content-Type: application/json
   "status": "unknown",
   "extraField": "not allowed"
 }
+### Chapter 6: Existing payment returns 200 OK
+GET http://localhost:3000/payments/1
+
+### Chapter 6: Missing payment returns 404 Not Found
+GET http://localhost:3000/payments/999

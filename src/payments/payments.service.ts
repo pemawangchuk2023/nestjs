@@ -1,4 +1,4 @@
-import { Injectable } from "@nestjs/common";
+import { Injectable, NotFoundException } from "@nestjs/common";
 import { CreatePaymentDto } from "src/payments/dto/create-payment.dto";
 
 @Injectable()
@@ -29,7 +29,13 @@ export class PaymentsService {
     }
 
     public findOne(id: string) {
-        return this.payments.find((payment) => payment.id === Number(id));
+        const payment = this.payments.find((payment) => payment.id === Number(id));
+
+        if (!payment) {
+            throw new NotFoundException(`Payment with id ${id} not found`);
+        }
+
+        return payment;
     }
 
     public create(createPaymentDto: CreatePaymentDto) {

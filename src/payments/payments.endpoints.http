@@ -20,3 +20,15 @@ Content-Type: application/json
   "amount": 3000,
   "status": "pending"
 }
+
+### Chapter 5: Invalid payment body returns 400 Bad Request
+POST http://localhost:3000/payments
+Content-Type: application/json
+
+{
+  "invoiceNo": 123,
+  "customer": "",
+  "amount": 0,
+  "status": "unknown",
+  "extraField": "not allowed"
+}

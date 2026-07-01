@@ -1,6 +1,6 @@
 # Chapter 04 - DTOs For Request Bodies
 
-[Previous: Chapter 03](chapter-03-query-params.md) | [Course index](README.md)
+[Previous: Chapter 03](chapter-03-query-params.md) | [Course index](README.md) | [Next: Chapter 05](chapter-05-validation-pipe.md)
 
 ![Chapter 04 DTO flow](assets/chapter-04-dtos.svg)
 

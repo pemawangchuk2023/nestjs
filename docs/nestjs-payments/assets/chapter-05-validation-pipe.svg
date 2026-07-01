@@ -1,0 +1,46 @@
+<svg width="1160" height="760" viewBox="0 0 1160 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1160" height="760" fill="#F8FAFC"/>
+  <text x="580" y="58" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" fill="#172033">Chapter 05: DTO Validation With ValidationPipe</text>
+  <text x="580" y="91" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#536176">ValidationPipe checks CreatePaymentDto before invalid payment data reaches the service.</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#DC2626"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#1F2937" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect x="70" y="130" width="310" height="112" rx="8" fill="#FFF7ED" stroke="#FDBA74" filter="url(#shadow)"/>
+  <text x="225" y="162" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#9A3412">POST /payments</text>
+  <text x="225" y="190" text-anchor="middle" font-family="Consolas, monospace" font-size="15" fill="#9A3412">invoiceNo: 123</text>
+  <text x="225" y="214" text-anchor="middle" font-family="Consolas, monospace" font-size="15" fill="#9A3412">amount: 0, status: "unknown"</text>
+
+  <rect x="470" y="130" width="360" height="112" rx="8" fill="#FEF2F2" stroke="#FCA5A5" filter="url(#shadow)"/>
+  <text x="650" y="169" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#991B1B">ValidationPipe</text>
+  <text x="650" y="199" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#B91C1C">whitelist: true</text>
+  <text x="650" y="223" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#B91C1C">forbidNonWhitelisted: true</text>
+
+  <line x1="380" y1="186" x2="458" y2="186" stroke="#F97316" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="345" y="315" width="610" height="122" rx="8" fill="#FFFFFF" stroke="#CBD5E1" filter="url(#shadow)"/>
+  <text x="650" y="353" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#0F172A">CreatePaymentDto Rules</text>
+  <text x="650" y="383" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#475569">@IsString(), @IsNotEmpty()</text>
+  <text x="650" y="408" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#475569">@IsNumber(), @Min(1), @IsIn(["paid", "pending"])</text>
+
+  <line x1="650" y1="242" x2="650" y2="303" stroke="#DC2626" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="110" y="520" width="360" height="112" rx="8" fill="#FEF2F2" stroke="#FCA5A5" filter="url(#shadow)"/>
+  <text x="290" y="559" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#991B1B">Invalid Body</text>
+  <text x="290" y="590" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#B91C1C">400 Bad Request</text>
+  <text x="290" y="615" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#7F1D1D">Service does not run</text>
+
+  <rect x="690" y="520" width="360" height="112" rx="8" fill="#ECFDF5" stroke="#86EFAC" filter="url(#shadow)"/>
+  <text x="870" y="559" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#166534">Valid Body</text>
+  <text x="870" y="590" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#166534">PaymentsService.create()</text>
+  <text x="870" y="615" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#166534">Payment is created</text>
+
+  <line x1="560" y1="437" x2="360" y2="508" stroke="#DC2626" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="740" y1="437" x2="830" y2="508" stroke="#16A34A" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

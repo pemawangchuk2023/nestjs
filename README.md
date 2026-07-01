@@ -12,6 +12,7 @@ The goal is simple: every chapter adds one NestJS concept, one testable endpoint
 | [Chapter 02](docs/nestjs-payments/chapter-02-route-params.md) | Controller route parameters | Return one payment by ID | `GET /payments/1` |
 | [Chapter 03](docs/nestjs-payments/chapter-03-query-params.md) | Controller query parameters | Filter payments by status | `GET /payments?status=paid` |
 | [Chapter 04](docs/nestjs-payments/chapter-04-dtos.md) | DTOs and request bodies | Create a payment from JSON body | `POST /payments` |
+| [Chapter 05](docs/nestjs-payments/chapter-05-validation-pipe.md) | ValidationPipe and DTO rules | Reject invalid payment bodies | `POST /payments` |
 
 Start here:
 
@@ -28,11 +29,13 @@ nestjs_p/
       chapter-02-route-params.md
       chapter-03-query-params.md
       chapter-04-dtos.md
+      chapter-05-validation-pipe.md
       assets/
         chapter-01-basic-flow.svg
         chapter-02-route-params.svg
         chapter-03-query-params.svg
         chapter-04-dtos.svg
+        chapter-05-validation-pipe.svg
   src/
     payments/
       payments.module.ts
@@ -71,3 +74,4 @@ This repo follows the official NestJS docs chapter by chapter:
 
 - [NestJS Documentation](https://docs.nestjs.com/)
 - [Controllers](https://docs.nestjs.com/controllers)
+- [Validation](https://docs.nestjs.com/techniques/validation)

@@ -10,6 +10,7 @@ This folder is the learning book for the repo. The source code stays in `src/`; 
 | [02 - Controller Route Parameters](chapter-02-route-params.md) | `@Get(':id')`, `@Param()` | How to read a value from the URL | `GET /payments/1` |
 | [03 - Controller Query Parameters](chapter-03-query-params.md) | `@Query()` | How to filter list data using the query string | `GET /payments?status=paid` |
 | [04 - DTOs For Request Bodies](chapter-04-dtos.md) | DTO, `@Post()`, `@Body()` | How to describe create-payment request data | `POST /payments` |
+| [05 - DTO Validation With ValidationPipe](chapter-05-validation-pipe.md) | `ValidationPipe`, `class-validator` | How to reject bad request bodies | `POST /payments` |
 
 ## Current Feature
 
@@ -24,6 +25,8 @@ PaymentsModule
     findAll(status)
     findOne(id)
     create(createPaymentDto)
+  ValidationPipe
+    validates CreatePaymentDto before service logic
 ```
 
 ## How To Study Each Chapter
@@ -37,3 +40,4 @@ PaymentsModule
 ## Official Docs Used
 
 - [NestJS Controllers](https://docs.nestjs.com/controllers)
+- [NestJS Validation](https://docs.nestjs.com/techniques/validation)

@@ -1,4 +1,5 @@
 import { Injectable } from "@nestjs/common";
+import { CreatePaymentDto } from "src/payments/dto/create-payment.dto";
 
 @Injectable()
 export class PaymentsService {
@@ -29,5 +30,16 @@ export class PaymentsService {
 
     public findOne(id: string) {
         return this.payments.find((payment) => payment.id === Number(id));
+    }
+
+    public create(createPaymentDto: CreatePaymentDto) {
+        const payment = {
+            id: this.payments.length + 1,
+            ...createPaymentDto,
+        };
+
+        this.payments.push(payment);
+
+        return payment;
     }
 }

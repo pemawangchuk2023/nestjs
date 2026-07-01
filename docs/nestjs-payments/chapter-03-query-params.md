@@ -1,6 +1,6 @@
 # Chapter 03 - Controller Query Parameters
 
-[Previous: Chapter 02](chapter-02-route-params.md) | [Course index](README.md)
+[Previous: Chapter 02](chapter-02-route-params.md) | [Course index](README.md) | [Next: Chapter 04](chapter-04-dtos.md)
 
 ![Chapter 03 query parameter flow](assets/chapter-03-query-params.svg)
 

@@ -9,3 +9,14 @@ GET http://localhost:3000/payments?status=paid
 
 ### Chapter 3: Filter payments by pending status
 GET http://localhost:3000/payments?status=pending
+
+### Chapter 4: Create a new payment
+POST http://localhost:3000/payments
+Content-Type: application/json
+
+{
+  "invoiceNo": "BTN-003",
+  "customer": "Dorji Mart",
+  "amount": 3000,
+  "status": "pending"
+}

@@ -11,6 +11,7 @@ The goal is simple: every chapter adds one NestJS concept, one testable endpoint
 | [Chapter 01](docs/nestjs-payments/chapter-01-basic-flow.md) | Module, controller, service flow | Return all payments | `GET /payments` |
 | [Chapter 02](docs/nestjs-payments/chapter-02-route-params.md) | Controller route parameters | Return one payment by ID | `GET /payments/1` |
 | [Chapter 03](docs/nestjs-payments/chapter-03-query-params.md) | Controller query parameters | Filter payments by status | `GET /payments?status=paid` |
+| [Chapter 04](docs/nestjs-payments/chapter-04-dtos.md) | DTOs and request bodies | Create a payment from JSON body | `POST /payments` |
 
 Start here:
 
@@ -26,10 +27,12 @@ nestjs_p/
       chapter-01-basic-flow.md
       chapter-02-route-params.md
       chapter-03-query-params.md
+      chapter-04-dtos.md
       assets/
         chapter-01-basic-flow.svg
         chapter-02-route-params.svg
         chapter-03-query-params.svg
+        chapter-04-dtos.svg
   src/
     payments/
       payments.module.ts
@@ -59,6 +62,7 @@ Use `src/payments/payments.endpoints.http` in VS Code REST Client, or open these
 GET http://localhost:3000/payments
 GET http://localhost:3000/payments/1
 GET http://localhost:3000/payments?status=paid
+POST http://localhost:3000/payments
 ```
 
 ## Official Docs
